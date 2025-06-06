@@ -1,0 +1,34 @@
+{
+  "name": "react-by-as",
+  "version": "1.0.0",
+  "description": "This is React for ya!",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Somabrata007/React-by-AS.git).git"
+  },
+  "author": "Somabrata Satpathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Somabrata007/React-by-AS.git)/issues"
+  },
+  "homepage": "https://github.com/Somabrata007/React-by-AS.git)#readme",
+  "devDependencies": {
+    "@babel/core": "^7.27.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.15.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.14.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
