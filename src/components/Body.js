@@ -3,12 +3,8 @@ import { restaurantList } from "../config";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
-function filterData(searchText, restaurants) {
-  return restaurants.filter((restaurant) =>
-    restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
-  );
-}
+import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
@@ -36,7 +32,9 @@ const Body = () => {
     );
   }
 
-  console.log("render");
+  const isOnline = useOnline();
+  
+  if(!isOnline) return <h1>🔴 No Internet Connection. Please check your connection and try again.</h1>;
 
   // if(filteredRestaurants?.length === 0 && allRestaurants?.length > 0) {
   //   return <h1>No Restaurants match your Filter!!!</h1>;
